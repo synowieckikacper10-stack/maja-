@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dla Mai ❤️</title>
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #ff9ecf, #ff6fb5);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 20vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.3em;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: white;
+    color: #ff4da6;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #ffe6f2;
+    transform: scale(1.1);
+}
+
+/* SERCA */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Maja ❤️</h1>
+    <p>
+        Ta strona jest tylko dla Ciebie.  
+        Dla najpiękniejszej dziewczyny na świecie.
+    </p>
+    <a href="oczy.html">Kliknij dalej 💗</a>
+</div>
+
+<script>
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+}, 300);
+</script>
+
+</body>
+</html>
